@@ -4,6 +4,7 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $bg-grey: #f6f6f6;
+$dark-grey: #353535;
 $gradient-purple: linear-gradient(155deg, $secondary-color 0%, $primary-color 100%);
 $max-view-width: 992px;
 
@@ -76,9 +77,8 @@ main {
   margin: 0 auto;
 }
 
-.main__header {
+.body__header {
   @extend %flex-centered;
-  flex-direction: column;
   box-shadow: $block-shadow;
   width: 100%;
   z-index: 1000;
