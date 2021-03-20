@@ -1,7 +1,8 @@
 @use 'base';
 
 .section__header {
-  margin: 0;
+  margin: 0 auto;
+  max-width: base.$max-view-width;
   padding: 58px 16px 23px 16px;
 }
 
@@ -33,7 +34,11 @@
 /* actions-list */
 
 .actions-list__container {
-  margin-bottom: 54px;
+  margin: 0 auto 54px auto;
+  max-width: base.$max-view-width;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .action-card__container {
@@ -42,6 +47,7 @@
   align-items: center;
   padding: 0 18px;
   margin: 18px 0;
+  flex: 0 1 414px;
 }
 
 .action-card__body {
@@ -120,3 +126,8 @@
   left: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+  .action-card__container {
+    flex: 0 1 330px;
+  }
+}
