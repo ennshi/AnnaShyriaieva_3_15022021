@@ -1,0 +1,122 @@
+@use 'base';
+
+.section__header {
+  margin: 0;
+  padding: 58px 16px 23px 16px;
+}
+
+.location__container {
+  @extend %flex-centered;
+  background-color: #eaeaea;
+  height: 45px;
+  color: #353535;
+
+  i {
+    margin-right: 15px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.reservation__container {
+  @extend %flex-centered;
+  flex-direction: column;
+  background-color: base.$bg-grey;
+  min-height: 286px;
+  width: 100%;
+  text-align: center;
+  padding: 0 32px;
+}
+
+/* actions-list */
+
+.actions-list__container {
+  margin-bottom: 54px;
+}
+
+.action-card__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  margin: 18px 0;
+}
+
+.action-card__body {
+  border-radius: 15px;
+  height: 72px;
+  margin-left: 10px;
+  background-color: base.$bg-grey;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: base.$block-shadow;
+  padding-left: 36px;
+  font-weight: bold;
+  i {
+    margin-right: 29px;
+  }
+}
+
+/* cards */
+
+.card-list__container {
+  width: 100%;
+  padding: 0 16px 45px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: base.$max-view-width;
+  margin: 0 auto;
+}
+
+.card__container {
+  box-sizing: border-box;
+  margin: 18px 0;
+  width: 100%;
+  height: 246px;
+  border-radius: 15px;
+  box-shadow: base.$block-shadow;
+  flex: 0 1 414px;
+}
+
+.card__media {
+  @extend %flex-centered;
+  flex-direction: column;
+  width: 100%;
+  height: 172px;
+  img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+    height: 172px;
+  }
+}
+
+.card__body {
+  @extend %flex-centered;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #fff;
+  justify-content: space-between;
+  width: 100%;
+  padding: 19px 25px 17px 15px;
+}
+
+/* chips */
+
+.chip--round-violet {
+  @extend %flex-centered;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  background-color: base.$primary-color;
+  color: #fff;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  left: 15px;
+}
+
