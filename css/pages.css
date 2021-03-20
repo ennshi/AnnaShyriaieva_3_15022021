@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+.selected__container, .btn__container {
+  display: grid;
+  place-items: center;
+}
+
+.body__header, .main__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+button:focus {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+p,
+h3,
+h4 {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+.main__wrapper {
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+}
+
+.body__header {
+  box-shadow: 1px 1px 10px #cbcbcb;
+  width: 100%;
+  z-index: 1000;
+}
+
+/*sections */
+.section__container--grey {
+  background-color: #f6f6f6;
+}
+
+.section__container--100 {
+  width: 100%;
+}
+
+/* buttons */
+.btn--purple {
+  height: 48px;
+  border-radius: 25px;
+  color: #fff;
+  background: #FF79DA;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 28px 0;
+  box-shadow: 1px 1px 10px #cbcbcb;
+  background: linear-gradient(155deg, #FF79DA 0%, #9356DC 100%);
+}
+
+.btn--medium {
+  width: 178px;
+}
+
+.btn--large {
+  width: 218px;
+}
+
+/* likes */
+.likes__container {
+  position: relative;
+  padding-right: 15px;
+  padding-bottom: 18px;
+}
+
+.icon--liked,
+.icon--empty {
+  position: absolute;
+  left: 0;
+}
+
+.icon--liked {
+  font-size: 24px;
+  top: 0;
+}
+
+.icon--empty {
+  font-size: 23px;
+  top: 1px;
+}
+
+.icon--liked {
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.icon--liked:before {
+  background: -moz-linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
+  background: -ms-linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
+  background: -o-linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon--liked:hover {
+  opacity: 1;
+}
+
+/* footer*/
+.footer__wrapper {
+  width: 100%;
+  background-color: #353535;
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 23px;
+  color: #fff;
+}
+.footer__container a {
+  color: #fff;
+}
+.footer__container a:hover {
+  text-decoration: underline;
+}
+.footer__container ul {
+  margin-bottom: 31px;
+}
+.footer__container ul li {
+  margin-top: 10px;
+}
+.footer__container ul li i {
+  margin-right: 10px;
+  width: 1rem;
+  height: 1rem;
+}
+
+.footer__logo {
+  margin-top: 26px;
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive;
+}
+
+.menu-card__body h4,
+.menu-card__body p {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+main {
+  background-color: #f6f6f6;
+}
+
+.body__header {
+  position: relative;
+}
+.body__header i {
+  position: absolute;
+  top: 38px;
+  left: 20px;
+  color: #353535;
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__media {
+  width: 100%;
+  height: 278px;
+}
+.header__media img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header__body__container {
+  width: 100%;
+  border-radius: 40px;
+  position: absolute;
+  background-color: #f6f6f6;
+  top: 230px;
+  left: 0;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px 30px 16px 16px;
+  justify-content: space-between;
+}
+.header__body h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+}
+
+/* sections */
+.menu-sections__wrapper {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-section__container {
+  width: 100%;
+  flex: 0 1 370px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-section__header {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.1rem;
+  position: relative;
+  margin-bottom: 22px;
+  margin-left: 20px;
+}
+
+.menu-section__header::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 38px;
+  border: 1px solid #99E2D0;
+}
+
+/* cards */
+.menu-card__container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #cbcbcb;
+  width: 345px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu-card__container h4 {
+  font-size: 1.1rem;
+}
+.menu-card__container span {
+  margin-top: 39px;
+  font-weight: bold;
+  padding-right: 23px;
+}
+
+.selected__container {
+  width: 0;
+  background-color: #99E2D0;
+  transition: width 1s ease;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.selected__container i {
+  color: #fff;
+  font-size: 1.1rem;
+  overflow: hidden;
+}
+
+.menu-card__body {
+  padding: 16px 0 14px 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: width 1s ease;
+}
+.menu-card__body p {
+  margin-top: 11px;
+}
+.menu-card__body h4,
+.menu-card__body p {
+  transition: width 1s ease;
+}
+
+.menu-card__container:hover .selected__container {
+  transition: width 1s ease;
+  width: 57px;
+}
+.menu-card__container:hover .selected__container i {
+  transform: rotate(360deg);
+  transition: all 1s ease;
+}
+.menu-card__container:hover .menu-card__body {
+  width: 200px;
+}
+.menu-card__container:hover .menu-card__body h4,
+.menu-card__container:hover .menu-card__body p {
+  transition: width 1s ease;
+  width: 200px;
+}
+
+/* button */
+.btn__container {
+  margin-bottom: 52px;
+  margin-top: 29px;
+}
+
+/* animations */
+.menu-card__container:nth-child(2) {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-delay: 0s;
+}
+
+.menu-card__container:nth-child(3) {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-delay: 0.2s;
+}
+
+.menu-card__container:nth-child(4) {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=pages.css.map */
