@@ -1,5 +1,7 @@
 @use 'base';
 
+$width-transition: width 1s ease;
+
 %text-overflow-ellipsis {
   overflow: hidden;
   white-space: nowrap;
@@ -91,7 +93,7 @@ main {
   margin-left: 20px;
 }
 
-.menu-section__header:after {
+.menu-section__header::after {
   content: '';
   position: absolute;
   top: 28px;
@@ -111,6 +113,7 @@ main {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  overflow: hidden;
 
   h4 {
     font-size: 1.1rem;
@@ -124,15 +127,17 @@ main {
 }
 
 .selected__container {
-  width: 57px;
-  display: none;
+  width: 0;
   background-color: base.$tertiary-color;
+  transition: $width-transition;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  @extend %center-element;
 
   i {
     color: #fff;
     font-size: 1.1rem;
+    overflow: hidden;
   }
 }
 
@@ -141,33 +146,48 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  transition: $width-transition;
 
   p {
     margin-top: 11px;
+  }
+
+  h4,
+  p {
+    transition: $width-transition;
+    @extend %text-overflow-ellipsis;
   }
 }
 
 .menu-card__container:hover {
 
   .selected__container {
-    @extend %center-element;
+    transition: $width-transition;
+    width: 57px;
+    i {
+      transform: rotate(360deg);
+      transition: all 1s ease;
+    }
   }
 
   .menu-card__body {
     width: 200px;
-    h4 {
-      @extend %text-overflow-ellipsis;
-      width: 200px;
-    }
+    h4,
     p {
-      @extend %text-overflow-ellipsis;
+      transition: $width-transition;
       width: 200px;
     }
   }
 }
+
+/* button */
 
 .btn__container {
   @extend %center-element;
   margin-bottom: 52px;
   margin-top: 29px;
 }
+
+/* animations */
+
+
