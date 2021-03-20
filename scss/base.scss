@@ -12,6 +12,7 @@ $logo-font: 'Shrikhand', cursive;
 $body-font: 'Roboto', sans-serif;
 
 $block-shadow: 1px 1px 10px #cbcbcb;
+$block-shadow-darker: 1px 1px 10px #8d8d8d;
 
 $mobile-padding: 0 23px;
 
@@ -112,6 +113,12 @@ main {
   margin: 28px 0;
   box-shadow: $block-shadow;
   background: $gradient-purple;
+  transition: all 0.5s;
+}
+
+.btn--purple:hover {
+  opacity: 0.8;
+  box-shadow: $block-shadow-darker;
 }
 
 .btn--medium {
