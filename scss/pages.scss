@@ -9,9 +9,11 @@ $width-transition: width 1s ease;
   text-overflow: ellipsis;
 }
 
-%center-element {
-  display: grid;
-  place-items: center;
+@mixin animation-fade-in-up($delay) {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-delay: $delay;
 }
 
 main {
@@ -190,4 +192,26 @@ main {
 
 /* animations */
 
+.menu-card__container:nth-child(2) {
+  @include animation-fade-in-up(0s);
+}
 
+.menu-card__container:nth-child(3) {
+  @include animation-fade-in-up(0.2s);
+}
+
+.menu-card__container:nth-child(4) {
+  @include animation-fade-in-up(0.4s);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
