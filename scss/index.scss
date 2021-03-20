@@ -1,5 +1,9 @@
 @use 'base';
 
+@mixin spinnerAnimation($animation-name, $animation-duration) {
+  animation: $animation-name $animation-duration;
+}
+
 .section__header {
   margin: 0 auto;
   max-width: base.$max-view-width;
@@ -126,6 +130,66 @@
   left: 15px;
 }
 
+/* loader */
+
+.loader__wrapper {
+  @extend %center-element;
+  @include spinnerAnimation(showSpinner, 4s);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #fff;
+  overflow: hidden;
+  visibility: hidden;
+
+  i {
+    font-size: 2.5rem;
+    @include spinnerAnimation(rotateSpinner, 1s);
+    animation-iteration-count: infinite;
+    @include base.linear-gradient-bg(155deg, base.$primary-color, base.$secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+}
+
+/* animations */
+
+body {
+  @include spinnerAnimation(blockScroll, 4s)
+}
+
+@keyframes rotateSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes showSpinner {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes blockScroll {
+  from {
+    position: fixed;
+  }
+  to {
+    position: fixed;
+  }
+}
+
+/* media */
 @media only screen and (min-width: 768px) {
   .action-card__container {
     flex: 0 1 330px;
