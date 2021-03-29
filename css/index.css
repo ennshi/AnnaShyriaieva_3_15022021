@@ -262,6 +262,7 @@ main {
   border-radius: 15px;
   box-shadow: 1px 1px 10px #cbcbcb;
   flex: 0 1 414px;
+  position: relative;
 }
 
 .card__media {
@@ -322,6 +323,21 @@ main {
   background: linear-gradient(155deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.tag__container {
+  position: absolute;
+  width: 78px;
+  box-shadow: 1px 1px 6px #666666;
+  background-color: #99E2D0;
+  color: #139273;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 12px;
+  font-size: 0.9rem;
 }
 
 /* animations */

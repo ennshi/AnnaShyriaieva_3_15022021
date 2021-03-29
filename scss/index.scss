@@ -90,6 +90,7 @@
   border-radius: 15px;
   box-shadow: base.$block-shadow;
   flex: 0 1 414px;
+  position: relative;
 }
 
 .card__media {
@@ -154,6 +155,21 @@
     -webkit-text-fill-color: transparent;
   }
 
+}
+
+.tag__container {
+  position: absolute;
+  width: 78px;
+  box-shadow: base.$block-shadow-dark;
+  background-color: base.$tertiary-color;
+  color: base.$tertiary-color-darker;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 12px;
+  font-size: 0.9rem;
 }
 
 /* animations */
